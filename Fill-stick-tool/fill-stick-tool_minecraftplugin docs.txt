@@ -1,0 +1,51 @@
+commands:
+  item-FillStick:
+ 
+  /-radius:
+    usage: /-radius <radius>
+ 
+  /-ReplaceBlocks:
+    usage: /replaceblocks <true/false>    #sets the fillstandart: replace non Air-Blocks
+ 
+  /-IgnoreFluids:
+    usage: /ignorefluids <true/false>     #sets the fillstandart: ignore fluids(to handel them as air )
+ 
+  /-materialBordered:
+    usage: /materialbordered <true/false> #sets the fillstandart : place blocks only on groundblocks of the same Material
+ 
+  /undo-fill:
+    usage: /undo-fill                     #undos Last fill
+ 
+  /create-config:
+    usage: /create-config <ConfigName>    #Creates a confic item 
+ 
+  /ram-clear-undo:
+    usage: /ram-clear-undo                #clears the Undo Storage 
+   
+   
+   
+   
+Undo :
+    Undo cann undo past fills
+    it gets resetet on server-Stops or using '/ram-clear-undo'
+    
+  WARNING: undos only the fill blocks on the direckt y-cordinate of the fill        ,doesnt restore blocks below or above the y-level of the filled blocks .
+     
+    WARNING: There is only one undo storage For all players (every player whith op-Premisions can undo the action of every other)
+    WARNING: After every Server restart the all Undo-storage gets clered (undoin previos fills is not longer possible)
+   
+FillStick:
+    rightklick Blocks to create a lair of blocks from the Material of Hotbar-Slot 0
+   
+   
+FillOptions :
+    use the commands whith a '/-' to configure the fill options
+   
+    Warning : Options get reseted to defuld on Server restarts/stops
+   
+The Config Item:
+
+    A Config-item can be created using '/create-config <ConfigName>' 
+    All options are saved in the item ,The saved options are the one's you
+    Have configured via commands (see FillOptions)
+    To load a Confic simply right-Klick the Item
